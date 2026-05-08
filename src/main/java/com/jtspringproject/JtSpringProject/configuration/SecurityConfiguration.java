@@ -10,7 +10,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-
+import org.springframework.context.annotation.Lazy;
 import com.jtspringproject.JtSpringProject.models.User;
 import com.jtspringproject.JtSpringProject.services.userService;
 
@@ -19,7 +19,7 @@ public class SecurityConfiguration {
 
 	private final userService userService;
 
-	public SecurityConfiguration(userService userService) {
+	public SecurityConfiguration(@Lazy userService userService) {
 		this.userService = userService;
 	}
 

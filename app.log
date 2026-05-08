@@ -1,0 +1,47 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.4)
+
+2026-05-08 04:41:10.683  INFO 9452 --- [           main] c.j.J.JtSpringProjectApplication         : Starting JtSpringProjectApplication v0.0.1-SNAPSHOT using Java 21.0.11-ea on ip-172-31-46-139 with PID 9452 (/home/ubuntu/E-commerce-project-springBoot/target/JtSpringProject-0.0.1-SNAPSHOT.jar started by ubuntu in /home/ubuntu/E-commerce-project-springBoot)
+2026-05-08 04:41:10.687  INFO 9452 --- [           main] c.j.J.JtSpringProjectApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-05-08 04:41:12.674  INFO 9452 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-08 04:41:12.722  INFO 9452 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+2026-05-08 04:41:14.390  INFO 9452 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2026-05-08 04:41:14.421  INFO 9452 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-08 04:41:14.421  INFO 9452 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2026-05-08 04:41:15.366  INFO 9452 --- [           main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2026-05-08 04:41:15.829  INFO 9452 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-08 04:41:15.832  INFO 9452 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5002 ms
+2026-05-08 04:41:16.783  INFO 9452 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2026-05-08 04:41:18.037  INFO 9452 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-05-08 04:41:19.401  INFO 9452 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Hibernate: alter table CART add constraint FKcr1444sx6d8cey6x2jge8uhkt foreign key (customer_id) references CUSTOMER (id)
+Hibernate: alter table CART_PRODUCT add constraint FK6wwg0b4w0ujm6f0i7h3lil4ya foreign key (cart_id) references CART (id)
+Hibernate: alter table CART_PRODUCT add constraint FKnofqox67omk8ta913jms54dw4 foreign key (product_id) references PRODUCT (product_id)
+Hibernate: alter table PRODUCT add constraint FK7u438kvwr308xcwr4wbx36uiw foreign key (category_id) references CATEGORY (category_id)
+Hibernate: alter table PRODUCT add constraint FKt23apo8r9s2hse1dkt95ig0w5 foreign key (customer_id) references CUSTOMER (id)
+2026-05-08 04:41:21.234  INFO 9452 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-05-08 04:41:21.876  INFO 9452 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/admin/**']
+2026-05-08 04:41:21.905  INFO 9452 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2026-05-08 04:41:22.562  INFO 9452 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-05-08 04:41:23.050  INFO 9452 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2026-05-08 04:41:23.076  INFO 9452 --- [           main] c.j.J.JtSpringProjectApplication         : Started JtSpringProjectApplication in 13.651 seconds (JVM running for 14.835)
+2026-05-08 04:41:23.239  INFO 9452 --- [nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-08 04:41:23.239  INFO 9452 --- [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-08 04:41:23.242  INFO 9452 --- [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+Hibernate: select user0_.id as id1_3_, user0_.address as address2_3_, user0_.email as email3_3_, user0_.password as password4_3_, user0_.role as role5_3_, user0_.username as username6_3_ from CUSTOMER user0_ where user0_.username=?
+Hibernate: select user0_.id as id1_3_, user0_.address as address2_3_, user0_.email as email3_3_, user0_.password as password4_3_, user0_.role as role5_3_, user0_.username as username6_3_ from CUSTOMER user0_ where user0_.username=?
+Hibernate: insert into CUSTOMER (address, email, password, role, username) values (?, ?, ?, ?, ?)
+Hibernate: select user0_.id as id1_3_, user0_.address as address2_3_, user0_.email as email3_3_, user0_.password as password4_3_, user0_.role as role5_3_, user0_.username as username6_3_ from CUSTOMER user0_ where user0_.username=?
+Hibernate: select product0_.product_id as product_1_4_, product0_.category_id as category8_4_, product0_.customer_id as customer9_4_, product0_.description as descript2_4_, product0_.image as image3_4_, product0_.name as name4_4_, product0_.price as price5_4_, product0_.quantity as quantity6_4_, product0_.weight as weight7_4_ from PRODUCT product0_
+Hibernate: select user0_.id as id1_3_, user0_.address as address2_3_, user0_.email as email3_3_, user0_.password as password4_3_, user0_.role as role5_3_, user0_.username as username6_3_ from CUSTOMER user0_ where user0_.username=?
+Hibernate: select user0_.id as id1_3_0_, user0_.address as address2_3_0_, user0_.email as email3_3_0_, user0_.password as password4_3_0_, user0_.role as role5_3_0_, user0_.username as username6_3_0_ from CUSTOMER user0_ where user0_.id=?
+Hibernate: update CUSTOMER set address=?, email=?, password=?, role=?, username=? where id=?
+Hibernate: select product0_.product_id as product_1_4_, product0_.category_id as category8_4_, product0_.customer_id as customer9_4_, product0_.description as descript2_4_, product0_.image as image3_4_, product0_.name as name4_4_, product0_.price as price5_4_, product0_.quantity as quantity6_4_, product0_.weight as weight7_4_ from PRODUCT product0_
+Hibernate: select user0_.id as id1_3_, user0_.address as address2_3_, user0_.email as email3_3_, user0_.password as password4_3_, user0_.role as role5_3_, user0_.username as username6_3_ from CUSTOMER user0_ where user0_.username=?
+Hibernate: select product0_.product_id as product_1_4_, product0_.category_id as category8_4_, product0_.customer_id as customer9_4_, product0_.description as descript2_4_, product0_.image as image3_4_, product0_.name as name4_4_, product0_.price as price5_4_, product0_.quantity as quantity6_4_, product0_.weight as weight7_4_ from PRODUCT product0_
